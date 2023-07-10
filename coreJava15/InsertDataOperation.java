@@ -10,8 +10,10 @@ import java.util.Scanner;
 public class InsertDataOperation implements InsertDataInterface{
 
 	@Override
-	public boolean inserData(String userName, String password, Scanner sc) throws SQLException {
+	public boolean inserData(Scanner sc) throws SQLException {
 		 JdbcDatabaseConnection con=null;
+		 String userName="",password="";
+		 
 		 Connection connection=null;
 		PreparedStatement statement=null;
 		try {

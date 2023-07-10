@@ -8,11 +8,12 @@ import java.util.Scanner;
 
 public class UpdateDataBaseOperation implements UpdateInterface {
 	@Override
-	public boolean updateData(Scanner sc, JdbcDatabaseConnection con) throws SQLException {
+	public boolean updateData(Scanner sc) throws SQLException {
 		int choice=0, qty=0, price=0,id=0,  rowsAffected ;
 		String name="",userName="",password="",ans="",sql="";
 			PreparedStatement statement=null;
 			Connection connection=null;
+			 JdbcDatabaseConnection con=null;
 		// TODO Auto-generated method stub
 
 		try {

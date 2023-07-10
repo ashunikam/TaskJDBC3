@@ -4,6 +4,6 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 interface UpdateInterface {
-	boolean updateData(Scanner sc,JdbcDatabaseConnection con) throws SQLException;
+	boolean updateData(Scanner sc) throws SQLException;
 	
 }

@@ -10,12 +10,13 @@ import java.util.Scanner;
 public class RetrieveDataOperation implements RetrieveInteface{
 
 	@Override
-	public boolean retriveAllData(Scanner sc,JdbcDatabaseConnection con) {
+	public boolean retriveAllData(Scanner sc) {
 		// TODO Auto-generated method stub
 			Statement statement=null;
 			Connection connection=null;
 			String userName="";
 			String password="";
+			JdbcDatabaseConnection con;
 			try {
 				String url="jdbc:mysql://localhost:3306/studentDb?useSSL=false";
 				System.out.println("Enter userName");
@@ -44,7 +45,7 @@ public class RetrieveDataOperation implements RetrieveInteface{
 	}
 
 	@Override
-	public boolean retriveSpecificData(Scanner sc,JdbcDatabaseConnection con) throws SQLException {
+	public boolean retriveSpecificData(Scanner sc) throws SQLException {
 		// TODO Auto-generated method stub
 		String ans="";
 		String choice="";
@@ -53,6 +54,7 @@ public class RetrieveDataOperation implements RetrieveInteface{
 		Connection connection=null;
 		NumberRegEx obj=new NumberRegEx();
 		PreparedStatement statement=null;
+		JdbcDatabaseConnection con=null;
 		ResultSet rs=null;
 		String query="";
 		int pid;

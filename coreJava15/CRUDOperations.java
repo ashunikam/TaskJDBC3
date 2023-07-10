@@ -6,7 +6,11 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class CRUDOperations {
-	public boolean createTable(String userName, String password, JdbcDatabaseConnection con, Statement statement,Scanner sc) throws SQLException {
+	public boolean createTable() throws SQLException {
+		String userName="",password="";
+		JdbcDatabaseConnection con=null;
+		Scanner sc=new Scanner(System.in);
+		Statement statement=null;
 		String url="jdbc:mysql://localhost:3306/studentDb?useSSL=false";
 		System.out.println("Enter userName");
 		userName=sc.next();

@@ -5,5 +5,5 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public interface InsertDataInterface {
-	boolean inserData(String userName, String password,Scanner sc) throws SQLException;
+	boolean inserData(Scanner sc) throws SQLException;
 }

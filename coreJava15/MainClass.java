@@ -40,32 +40,32 @@ public class MainClass {
 			switch(choice) {
 			case "1":
 				createobj=new CRUDOperations();
-				if(!createobj.createTable(userName, password, connection, statement, sc)) {
+				if(!createobj.createTable()) {
 					System.out.println("Failed to create table");
 				}
 			break;
 			case "2":
 				insert=new InsertDataOperation();
-				if(!insert.inserData(userName, password, sc)) {
+				if(!insert.inserData(sc)) {
 					System.out.println("Failed to insert");
 				}
 				break;
 			case "3":
 				retrieve=new RetrieveDataOperation();
-				if(!retrieve.retriveAllData(sc,connection)) {
+				if(!retrieve.retriveAllData(sc)) {
 					System.out.println("Failed to retrieve");
 				}
 				
 				break;
 			case "4": 
 				retrieve=new RetrieveDataOperation();
-				if(!retrieve.retriveSpecificData(sc,connection)) {
+				if(!retrieve.retriveSpecificData(sc)) {
 					System.out.println("Failed to retrieve");
 				}
 				break;
 			case "5":
 				update=new UpdateDataBaseOperation();
-				if(! update.updateData(sc, connection)) {
+				if(! update.updateData(sc)) {
 					System.out.println("Failed to update");
 				}
 				break;
